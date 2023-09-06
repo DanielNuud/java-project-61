@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
 }
 
 group = 'hexlet.code'
@@ -26,6 +27,13 @@ application {
 run {
     standardInput = System.in
 }
+
+checkstyle {
+    toolVersion = '10.3.3'
+}
+
+
+
 
 
 
