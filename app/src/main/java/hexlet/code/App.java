@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
 
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class App {
     public static void main(String[] args) {
 
         System.out.println("Please enter the game number and press Enter.");
-        String[] gamesArray = {"Greet", "Even", "Calc", "Exit"};
+        String[] gamesArray = {"Greet", "Even", "Calc", "GCD", "Exit"};
         for (int i = 0; i < gamesArray.length; i++) {
             if (i != gamesArray.length - 1) {
                 System.out.println(i + 1 + " - " + gamesArray[i]);
@@ -31,6 +32,9 @@ public class App {
                 break;
             case 3:
                 CalcGame.calcDesc();
+                Engine.game(inputGameChoice, inputName);
+            case 4:
+                GCDGame.gcdDesc();
                 Engine.game(inputGameChoice, inputName);
             case 0:
                 break;
