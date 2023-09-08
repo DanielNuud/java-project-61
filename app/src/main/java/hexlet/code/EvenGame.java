@@ -20,19 +20,13 @@ public class EvenGame {
                 correctAnswer = "no";
             }
 
-            if ((randomNumber % 2 == 0 && userInput.equals("yes"))
-                    || (randomNumber % 2 != 0 && userInput.equals("no"))) {
+            if (correctAnswer.equals(userInput)) {
                 System.out.println("Correct!");
                 correctAnswers++;
-            } else if ((randomNumber % 2 == 0 && userInput.equals("no"))
-                    || (randomNumber % 2 != 0 && userInput.equals("yes"))) {
+            } else {
                 System.out.println("'" + userInput + "' is wrong answer ;(. "
                         + "Correct answer was '" + correctAnswer + "'.\n"
                         + "Let's try again, " + username + "!");
-                break;
-            } else {
-                System.out.println("'" + userInput + "' is wrong answer ;(. "
-                        + "Correct answer was '" + correctAnswer + "'");
                 break;
             }
         }
@@ -40,7 +34,5 @@ public class EvenGame {
         if (correctAnswers == 3) {
             System.out.println("Congratulations, " + username + "!");
         }
-
-
     }
 }
