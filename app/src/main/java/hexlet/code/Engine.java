@@ -7,10 +7,11 @@ import java.util.Scanner;
 public class Engine {
 
     public static void game(int gameNumber, String username) {
-        var correctAnswers = 0;
+        int correctAnswersCount = 0;
         String correctAnswer = "";
+        int winNumber = 3;
 
-        while (correctAnswers != 3) {
+        while (correctAnswersCount != winNumber) {
 
             switch (gameNumber) {
                 case 2:
@@ -35,7 +36,7 @@ public class Engine {
             var userInput = new Scanner(System.in).nextLine();
             if (correctAnswer.equals(userInput)) {
                 System.out.println("Correct!");
-                correctAnswers++;
+                correctAnswersCount++;
             } else {
                 System.out.println("'" + userInput + "' is wrong answer ;(. "
                         + "Correct answer was '" + correctAnswer + "'.\n"
@@ -44,7 +45,7 @@ public class Engine {
             }
         }
 
-        if (correctAnswers == 3) {
+        if (correctAnswersCount == winNumber) {
             System.out.println("Congratulations, " + username + "!");
         }
     }
