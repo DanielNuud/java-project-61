@@ -5,3 +5,4 @@
 1) Even -  https://asciinema.org/a/ieH3js65Fylfr3GvS9xGh4EQ
 2) Calc -  https://asciinema.org/a/mMUIdrwDEDI8SR85uxKiBoG2V
 3) GCD  -  https://asciinema.org/a/WnKBCDInix2251YN5OQYaqm5G
+4) Progression - https://asciinema.org/a/yXymAHa4ZiURCYkQiHgQQDWW0
