@@ -6,3 +6,4 @@
 2) Calc -  https://asciinema.org/a/mMUIdrwDEDI8SR85uxKiBoG2V
 3) GCD  -  https://asciinema.org/a/WnKBCDInix2251YN5OQYaqm5G
 4) Progression - https://asciinema.org/a/yXymAHa4ZiURCYkQiHgQQDWW0
+5) Prime - https://asciinema.org/a/V96Mf6V2ORp3lMJE8sMmq5Hwb
