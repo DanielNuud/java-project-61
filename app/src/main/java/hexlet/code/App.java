@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.GCDGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -11,7 +8,7 @@ public class App {
     public static void main(String[] args) {
 
         System.out.println("Please enter the game number and press Enter.");
-        String[] gamesArray = {"Greet", "Even", "Calc", "GCD", "Progression", "Exit"};
+        String[] gamesArray = {"Greet", "Even", "Calc", "GCD", "Progression", "Prime", "Exit"};
         for (int i = 0; i < gamesArray.length; i++) {
             if (i != gamesArray.length - 1) {
                 System.out.println(i + 1 + " - " + gamesArray[i]);
@@ -34,12 +31,19 @@ public class App {
             case 3:
                 CalcGame.calcDesc();
                 Engine.game(inputGameChoice, inputName);
+                break;
             case 4:
                 GCDGame.gcdDesc();
                 Engine.game(inputGameChoice, inputName);
+                break;
             case 5:
                 ProgressionGame.progressionDesc();
                 Engine.game(inputGameChoice, inputName);
+                break;
+            case 6:
+                PrimeGame.primeDesc();
+                Engine.game(inputGameChoice, inputName);
+                break;
             case 0:
                 break;
             default:

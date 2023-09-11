@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.GCDGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -27,6 +24,10 @@ public class Engine {
                     break;
                 case 5:
                     correctAnswer = ProgressionGame.progression();
+                    break;
+                case 6:
+                    correctAnswer = PrimeGame.prime();
+                    break;
                 default:
                     break;
             }
