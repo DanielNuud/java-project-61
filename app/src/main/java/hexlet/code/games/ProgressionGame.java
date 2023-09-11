@@ -5,10 +5,12 @@ public class ProgressionGame {
         System.out.println("What number is missing in the progression?");
     }
     public static String progression() {
-        int minLenght = 5; int lenghtRange = 5;
+        int minLenght = 5;
+        int lenghtRange = 5;
         int progLenght = minLenght + (int) (Math.random() * lenghtRange);
 
-        int minProgression = 1; int progressionRange = 10;
+        int minProgression = 1;
+        int progressionRange = 10;
         int progression = minProgression + (int) (Math.random() * progressionRange);
 
         int randomRange = 100;
