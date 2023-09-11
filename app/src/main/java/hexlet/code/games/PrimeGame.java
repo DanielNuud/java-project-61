@@ -6,7 +6,8 @@ public class PrimeGame {
     }
 
     public static String prime() {
-        int randomNumber = (int) (Math.random() * 100);
+        int randomRange = 100;
+        int randomNumber = (int) (Math.random() * randomRange);
         System.out.println("Question: " + randomNumber);
         System.out.print("Your answer: ");
 

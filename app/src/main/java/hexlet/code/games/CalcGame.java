@@ -6,10 +6,12 @@ public class CalcGame {
     }
     public static String calc() {
 
-        int randomNumber1 = (int) (Math.random() * 100);
-        int randomNumber2 = (int) (Math.random() * 100);
+        int randomRange = 100;
+        int randomNumber1 = (int) (Math.random() * randomRange);
+        int randomNumber2 = (int) (Math.random() * randomRange);
         String[] operators = {"+", "-", "*"};
-        int randomOperator = (int) (Math.random() * 3);
+        int operatorsRange = 3;
+        int randomOperator = (int) (Math.random() * operatorsRange);
 
         System.out.println("Question: " + randomNumber1 + " " + operators[randomOperator]
                 + " " + randomNumber2);
