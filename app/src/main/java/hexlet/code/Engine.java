@@ -33,7 +33,7 @@ public class Engine {
                     break;
             }
 
-            var userInput = new Scanner(System.in).nextLine();
+            var userInput = new Scanner(System.in).nextLine().toLowerCase().trim();
             if (correctAnswer.equals(userInput)) {
                 System.out.println("Correct!");
                 correctAnswersCount++;
