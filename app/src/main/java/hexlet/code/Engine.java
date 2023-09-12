@@ -9,13 +9,13 @@ import hexlet.code.games.ProgressionGame;
 import java.util.Scanner;
 
 public class Engine {
+    static final int WIN_NUMBER = 3;
 
     public static void game(String gameNumber, String username) {
         int correctAnswersCount = 0;
         String correctAnswer = "";
-        int winNumber = 3;
 
-        while (correctAnswersCount != winNumber) {
+        while (correctAnswersCount != WIN_NUMBER) {
 
             switch (gameNumber) {
                 case "2":
@@ -49,7 +49,7 @@ public class Engine {
             }
         }
 
-        if (correctAnswersCount == winNumber) {
+        if (correctAnswersCount == WIN_NUMBER) {
             System.out.println("Congratulations, " + username + "!");
         }
     }
