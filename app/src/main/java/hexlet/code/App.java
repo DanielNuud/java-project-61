@@ -23,30 +23,34 @@ public class App {
         System.out.print("Your choice: ");
         String inputGameChoice = new Scanner(System.in).nextLine();
 
-        System.out.println("Welcome to the Brain Games!");
-        String inputName = Cli.hello();
         switch (inputGameChoice) {
             case "1":
+                    Cli.hello();
                 break;
             case "2":
+                String inputNameEven = Cli.hello();
                 EvenGame.evenDesc();
-                Engine.game(inputGameChoice, inputName);
+                Engine.game(inputGameChoice, inputNameEven);
                 break;
             case "3":
+                String inputNameCalc = Cli.hello();
                 CalcGame.calcDesc();
-                Engine.game(inputGameChoice, inputName);
+                Engine.game(inputGameChoice, inputNameCalc);
                 break;
             case "4":
+                String inputNameGCD = Cli.hello();
                 GCDGame.gcdDesc();
-                Engine.game(inputGameChoice, inputName);
+                Engine.game(inputGameChoice, inputNameGCD);
                 break;
             case "5":
+                String inputNameProg = Cli.hello();
                 ProgressionGame.progressionDesc();
-                Engine.game(inputGameChoice, inputName);
+                Engine.game(inputGameChoice, inputNameProg);
                 break;
             case "6":
+                String inputNamePrime = Cli.hello();
                 PrimeGame.primeDesc();
-                Engine.game(inputGameChoice, inputName);
+                Engine.game(inputGameChoice, inputNamePrime);
                 break;
             case "0":
                 break;
