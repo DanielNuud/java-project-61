@@ -7,8 +7,8 @@ public class EvenGame {
     }
 
     public static String evenCheck() {
-        int randomRange = 100;
-        int randomNumber = (int) (Math.random() * randomRange);
+        final int RANDOMRANGE = 100;
+        int randomNumber = (int) (Math.random() * RANDOMRANGE);
         System.out.println("Question: " + randomNumber);
         System.out.print("Your answer: ");
 

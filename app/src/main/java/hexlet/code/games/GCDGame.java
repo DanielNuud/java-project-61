@@ -6,9 +6,9 @@ public class GCDGame {
     }
 
     public static String gcd() {
-        int randomRange = 100;
-        int randomNumber1 = (int) (Math.random() * randomRange);
-        int randomNumber2 = (int) (Math.random() * randomRange);
+        final int RANDOMRANGE = 100;
+        int randomNumber1 = (int) (Math.random() * RANDOMRANGE);
+        int randomNumber2 = (int) (Math.random() * RANDOMRANGE);
 
         System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
         System.out.print("Your answer: ");

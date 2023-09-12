@@ -5,16 +5,16 @@ public class ProgressionGame {
         System.out.println("What number is missing in the progression?");
     }
     public static String progression() {
-        int minLenght = 5;
-        int lenghtRange = 5;
-        int progLenght = minLenght + (int) (Math.random() * lenghtRange);
+        final int MINLENGHT = 5;
+        final int LENGHTRANGE = 5;
+        int progLenght = MINLENGHT + (int) (Math.random() * LENGHTRANGE);
 
-        int minProgression = 1;
-        int progressionRange = 10;
-        int progression = minProgression + (int) (Math.random() * progressionRange);
+        final int MINPROGRESSION = 1;
+        final int PROGRESSIONRANGE = 10;
+        int progression = MINPROGRESSION + (int) (Math.random() * PROGRESSIONRANGE);
 
-        int randomRange = 100;
-        int randomStart = (int) (Math.random() * randomRange);
+        final int RANDOMRANGE = 100;
+        int randomStart = (int) (Math.random() * RANDOMRANGE);
         int hidenNumber = (int) (Math.random() * progLenght);
 
         String result = randomStart + " ";

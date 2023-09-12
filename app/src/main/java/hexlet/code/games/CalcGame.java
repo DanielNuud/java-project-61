@@ -6,9 +6,9 @@ public class CalcGame {
     }
     public static String calc() {
 
-        int randomRange = 100;
-        int randomNumber1 = (int) (Math.random() * randomRange);
-        int randomNumber2 = (int) (Math.random() * randomRange);
+        final int RANDOMRANGE = 100;
+        int randomNumber1 = (int) (Math.random() * RANDOMRANGE);
+        int randomNumber2 = (int) (Math.random() * RANDOMRANGE);
         String[] operators = {"+", "-", "*"};
         int operatorsRange = 3;
         int randomOperator = (int) (Math.random() * operatorsRange);
