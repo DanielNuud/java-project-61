@@ -1,14 +1,13 @@
 package hexlet.code.games;
 
 public class EvenGame {
-
+    static final int RANDOM_RANGE = 100;
     public static void evenDesc() {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 
     public static String evenCheck() {
-        final int RANDOMRANGE = 100;
-        int randomNumber = (int) (Math.random() * RANDOMRANGE);
+        int randomNumber = (int) (Math.random() * RANDOM_RANGE);
         System.out.println("Question: " + randomNumber);
         System.out.print("Your answer: ");
 

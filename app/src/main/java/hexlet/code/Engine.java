@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static void game(int gameNumber, String username) {
+    public static void game(String gameNumber, String username) {
         int correctAnswersCount = 0;
         String correctAnswer = "";
         int winNumber = 3;
@@ -18,19 +18,19 @@ public class Engine {
         while (correctAnswersCount != winNumber) {
 
             switch (gameNumber) {
-                case 2:
+                case "2":
                     correctAnswer = EvenGame.evenCheck();
                     break;
-                case 3:
+                case "3":
                     correctAnswer = CalcGame.calc();
                     break;
-                case 4:
+                case "4":
                     correctAnswer = GCDGame.gcd();
                     break;
-                case 5:
+                case "5":
                     correctAnswer = ProgressionGame.progression();
                     break;
-                case 6:
+                case "6":
                     correctAnswer = PrimeGame.prime();
                     break;
                 default:

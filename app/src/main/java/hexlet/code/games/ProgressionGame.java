@@ -1,20 +1,19 @@
 package hexlet.code.games;
 
 public class ProgressionGame {
+    static final int MIN_LENGTH = 5;
+    static final int LENGTH_RANGE = 5;
+    static final int MIN_PROGRESSION = 1;
+    static final int PROGRESSION_RANGE = 10;
+    static final int RANDOM_RANGE = 100;
+
     public static void progressionDesc() {
         System.out.println("What number is missing in the progression?");
     }
     public static String progression() {
-        final int MINLENGHT = 5;
-        final int LENGHTRANGE = 5;
-        int progLenght = MINLENGHT + (int) (Math.random() * LENGHTRANGE);
-
-        final int MINPROGRESSION = 1;
-        final int PROGRESSIONRANGE = 10;
-        int progression = MINPROGRESSION + (int) (Math.random() * PROGRESSIONRANGE);
-
-        final int RANDOMRANGE = 100;
-        int randomStart = (int) (Math.random() * RANDOMRANGE);
+        int progLenght = MIN_LENGTH + (int) (Math.random() * LENGTH_RANGE);
+        int progression = MIN_PROGRESSION + (int) (Math.random() * PROGRESSION_RANGE);
+        int randomStart = (int) (Math.random() * RANDOM_RANGE);
         int hidenNumber = (int) (Math.random() * progLenght);
 
         String result = randomStart + " ";
