@@ -17,13 +17,13 @@ public class GCDGame {
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
         for (int i = 0; i < ROUNDS_LENGTH; i++) {
             rounds[i][0] = randomNumber1 + " " + randomNumber2;
-            rounds[i][1] = GCD(randomNumber1, randomNumber2);
+            rounds[i][1] = gcd(randomNumber1, randomNumber2);
         }
 
         return rounds;
     }
 
-    public static String GCD(String randomNumber1, String randomNumber2) {
+    public static String gcd(String randomNumber1, String randomNumber2) {
         int num1 = Integer.parseInt(randomNumber1);
         int num2 = Integer.parseInt(randomNumber2);
 

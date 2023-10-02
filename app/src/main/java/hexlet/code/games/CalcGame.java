@@ -14,7 +14,7 @@ public class CalcGame {
 
         String[] operators = {"+", "-", "*"};
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
-        for (int i = 0; i < ROUNDS_LENGTH ; i++) {
+        for (int i = 0; i < ROUNDS_LENGTH; i++) {
             var firstNumber = Engine.getRandomStringNumber(RANDOM_RANGE);
             var secondNumber = Engine.getRandomStringNumber(RANDOM_RANGE);
             var operator = operators[Engine.getRandomNumber(OPERATORS_RANGE)];
