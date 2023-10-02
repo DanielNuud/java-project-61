@@ -25,32 +25,32 @@ public class App {
 
         switch (inputGameChoice) {
             case "1":
-                    Cli.hello();
+                Cli.hello();
                 break;
             case "2":
                 String inputNameEven = Cli.hello();
                 EvenGame.evenDesc();
-                Engine.game(inputGameChoice, inputNameEven);
+                Engine.game(EvenGame.evenRounds(), inputNameEven);
                 break;
             case "3":
                 String inputNameCalc = Cli.hello();
                 CalcGame.calcDesc();
-                Engine.game(inputGameChoice, inputNameCalc);
+                Engine.game(CalcGame.calcRounds(), inputNameCalc);
                 break;
             case "4":
                 String inputNameGCD = Cli.hello();
                 GCDGame.gcdDesc();
-                Engine.game(inputGameChoice, inputNameGCD);
+                Engine.game(GCDGame.gcdRounds(), inputNameGCD);
                 break;
             case "5":
                 String inputNameProg = Cli.hello();
                 ProgressionGame.progressionDesc();
-                Engine.game(inputGameChoice, inputNameProg);
+                Engine.game(ProgressionGame.progressionRounds(), inputNameProg);
                 break;
             case "6":
                 String inputNamePrime = Cli.hello();
                 PrimeGame.primeDesc();
-                Engine.game(inputGameChoice, inputNamePrime);
+                Engine.game(PrimeGame.primeRounds(), inputNamePrime);
                 break;
             case "0":
                 break;
