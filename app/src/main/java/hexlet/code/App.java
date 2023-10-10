@@ -24,38 +24,14 @@ public class App {
         String inputGameChoice = new Scanner(System.in).nextLine();
 
         switch (inputGameChoice) {
-            case "1":
-                Cli.hello();
-                break;
-            case "2":
-                String inputNameEven = Cli.hello();
-                EvenGame.evenDesc();
-                Engine.game(EvenGame.evenRounds(), inputNameEven);
-                break;
-            case "3":
-                String inputNameCalc = Cli.hello();
-                CalcGame.calcDesc();
-                Engine.game(CalcGame.calcRounds(), inputNameCalc);
-                break;
-            case "4":
-                String inputNameGCD = Cli.hello();
-                GCDGame.gcdDesc();
-                Engine.game(GCDGame.gcdRounds(), inputNameGCD);
-                break;
-            case "5":
-                String inputNameProg = Cli.hello();
-                ProgressionGame.progressionDesc();
-                Engine.game(ProgressionGame.progressionRounds(), inputNameProg);
-                break;
-            case "6":
-                String inputNamePrime = Cli.hello();
-                PrimeGame.primeDesc();
-                Engine.game(PrimeGame.primeRounds(), inputNamePrime);
-                break;
-            case "0":
-                break;
-            default:
-                break;
+            case "1" -> Cli.hello();
+            case "2" -> EvenGame.play(inputGameChoice);
+            case "3" -> CalcGame.calcPlay(inputGameChoice);
+            case "4" -> GCDGame.gcdPlay(inputGameChoice);
+            case "5" -> ProgressionGame.progressionPlay(inputGameChoice);
+            case "6" -> PrimeGame.primePlay(inputGameChoice);
+            case "0" -> {}
+            default -> throw new IllegalArgumentException("Unknown value: " + inputGameChoice);
         }
 
 

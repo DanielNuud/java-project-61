@@ -1,10 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class ProgressionGame {
     static final int MIN_LENGTH = 5;
-    static final int LENGTH_RANGE = 5;
+    static final int LENGTH_RANGE = 10;
     static final int MIN_PROGRESSION = 1;
     static final int PROGRESSION_RANGE = 10;
     static final int RANDOM_RANGE = 100;
@@ -14,14 +15,14 @@ public class ProgressionGame {
     public static void progressionDesc() {
         System.out.println("What number is missing in the progression?");
     }
-    public static String[][] progressionRounds() {
+    public static void progressionPlay(String inputGameChoice) {
 
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
         for (int i = 0; i < ROUNDS_LENGTH; i++) {
-            int progLength = Engine.getRandomNumber(MIN_LENGTH, LENGTH_RANGE);
-            int progression = Engine.getRandomNumber(MIN_PROGRESSION, PROGRESSION_RANGE);
-            int randomStart = Engine.getRandomNumber(RANDOM_RANGE);
-            int hidenNumber = Engine.getRandomNumber(progLength);
+            int progLength = Utils.getRandomNumber(MIN_LENGTH, LENGTH_RANGE);
+            int progression = Utils.getRandomNumber(MIN_PROGRESSION, PROGRESSION_RANGE);
+            int randomStart = Utils.getRandomNumber(RANDOM_RANGE);
+            int hidenNumber = Utils.getRandomNumber(progLength);
 
             int correctAnswer = 0;
             String result = randomStart + " ";
@@ -40,6 +41,6 @@ public class ProgressionGame {
             rounds[i][1] = Integer.toString(correctAnswer);
         }
 
-        return rounds;
+        System.out.println(Engine.engine(rounds, inputGameChoice));
     }
 }

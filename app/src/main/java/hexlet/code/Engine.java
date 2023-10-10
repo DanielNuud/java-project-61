@@ -1,45 +1,44 @@
 package hexlet.code;
 
+import hexlet.code.games.*;
+
 import java.util.Scanner;
 
 public class Engine {
-    static final int WIN_NUMBER = 3;
+    static final int NUMBER_OF_ROUNDS = 3;
 
-    public static int getRandomNumber(int max) {
-        return (int) (Math.random() * max);
+    public static void description(String numOfDescription) {
+        switch (numOfDescription) {
+            case "2" -> EvenGame.evenDesc();
+            case "3" -> CalcGame.calcDesc();
+            case "4" -> GCDGame.gcdDesc();
+            case "5" -> ProgressionGame.progressionDesc();
+            case "6" -> PrimeGame.primeDesc();
+            default -> throw new IllegalStateException("Unexpected value: " + numOfDescription);
+        };
     }
-    public static String getRandomStringNumber(int max) {
-        return Integer.toString((int) (Math.random() * max));
-    }
+    public static String engine(String[][] game, String numOfDescription) {
 
-    public static int getRandomNumber(int min, int max) {
-        return (int) (Math.random() * (max - min) + min);
-    }
+        String username = Cli.hello();
 
-    public static void game(String[][] game, String username) {
-        int correctAnswersCount = 0;
-        int round = 0;
+        description(numOfDescription);
 
-        while (correctAnswersCount != WIN_NUMBER) {
-
-            System.out.println("Question: " + game[round][0]);
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+            System.out.println("Question: " + game[i][0]);
             System.out.print("Your answer: ");
-            var userInput = new Scanner(System.in).nextLine().toLowerCase().trim();
+            var userInput = new Scanner(System.in)
+                    .nextLine()
+                    .toLowerCase()
+                    .trim();
 
-            if (game[round][1].equals(userInput)) {
+            if (game[i][1].equals(userInput)) {
                 System.out.println("Correct!");
-                correctAnswersCount++;
-                round++;
             } else {
-                System.out.println("'" + userInput + "' is wrong answer ;(. "
-                        + "Correct answer was '" + game[round][1] + "'.\n"
-                        + "Let's try again, " + username + "!");
-                break;
+                return "'" + userInput + "' is wrong answer ;(. "
+                        + "Correct answer was '" + game[i][1] + "'.\n"
+                        + "Let's try again, " + username + "!";
             }
         }
-
-        if (correctAnswersCount == WIN_NUMBER) {
-            System.out.println("Congratulations, " + username + "!");
-        }
+        return "Congratulations, " + username + "!";
     }
 }

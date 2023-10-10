@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCDGame {
     static final int RANDOM_RANGE = 100;
@@ -10,9 +11,9 @@ public class GCDGame {
         System.out.println("Find the greatest common divisor of given numbers.");
     }
 
-    public static String[][] gcdRounds() {
-        String randomNumber1 = Engine.getRandomStringNumber(RANDOM_RANGE);
-        String randomNumber2 = Engine.getRandomStringNumber(RANDOM_RANGE);
+    public static void gcdPlay(String inputGameChoice) {
+        var randomNumber1 = Utils.getRandomNumber(RANDOM_RANGE);
+        var randomNumber2 = Utils.getRandomNumber(RANDOM_RANGE);
 
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
         for (int i = 0; i < ROUNDS_LENGTH; i++) {
@@ -20,14 +21,14 @@ public class GCDGame {
             rounds[i][1] = gcd(randomNumber1, randomNumber2);
         }
 
-        return rounds;
+        System.out.println(Engine.engine(rounds, inputGameChoice));
     }
 
-    public static String gcd(String randomNumber1, String randomNumber2) {
-        int num1 = Integer.parseInt(randomNumber1);
-        int num2 = Integer.parseInt(randomNumber2);
+    public static String gcd(int randomNumber1, int randomNumber2) {
+        int num1 = randomNumber1;
+        int num2 = randomNumber2;
 
-        while (num2 != 0) {
+        while (randomNumber2 != 0) {
             int temp = num2;
             num2 = num1 % num2;
             num1 = temp;
