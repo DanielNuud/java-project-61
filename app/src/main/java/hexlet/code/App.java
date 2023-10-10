@@ -30,7 +30,8 @@ public class App {
             case "4" -> GCDGame.gcdPlay(inputGameChoice);
             case "5" -> ProgressionGame.progressionPlay(inputGameChoice);
             case "6" -> PrimeGame.primePlay(inputGameChoice);
-            case "0" -> {}
+            case "0" -> {
+            }
             default -> throw new IllegalArgumentException("Unknown value: " + inputGameChoice);
         }
 

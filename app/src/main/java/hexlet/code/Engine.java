@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.GCDGame;
+import hexlet.code.games.CalcGame;
 
 import java.util.Scanner;
 
@@ -15,7 +19,7 @@ public class Engine {
             case "5" -> ProgressionGame.progressionDesc();
             case "6" -> PrimeGame.primeDesc();
             default -> throw new IllegalStateException("Unexpected value: " + numOfDescription);
-        };
+        }
     }
     public static String engine(String[][] game, String numOfDescription) {
 
