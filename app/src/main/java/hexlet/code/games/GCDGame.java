@@ -28,7 +28,7 @@ public class GCDGame {
         int num1 = randomNumber1;
         int num2 = randomNumber2;
 
-        while (randomNumber2 != 0) {
+        while (num2 != 0) {
             int temp = num2;
             num2 = num1 % num2;
             num1 = temp;
