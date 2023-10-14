@@ -12,35 +12,36 @@ public class ProgressionGame {
     static final int ROUNDS_LENGTH = 3;
     static final int ROUND_LENGTH = 2;
 
-    public static void progressionDesc() {
-        System.out.println("What number is missing in the progression?");
-    }
-    public static void progressionPlay(String inputGameChoice) {
-
+    static final String PROGRESS_DESCRIPTION = "What number is missing in the progression?";
+    public static void progressionPlay() {
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
+
         for (int i = 0; i < ROUNDS_LENGTH; i++) {
             int progLength = Utils.getRandomNumber(MIN_LENGTH, LENGTH_RANGE);
             int progression = Utils.getRandomNumber(MIN_PROGRESSION, PROGRESSION_RANGE);
             int randomStart = Utils.getRandomNumber(RANDOM_RANGE);
-            int hidenNumber = Utils.getRandomNumber(progLength);
+            int hiddenNumber = Utils.getRandomNumber(progLength);
 
+            String[] numbers = new String[progLength];
             int correctAnswer = 0;
-            String result = randomStart + " ";
 
             for (int j = 0; j < progLength; j++) {
-                randomStart += progression;
-                if (j == hidenNumber) {
-                    result += ".. ";
+                if (j == hiddenNumber) {
+                    numbers[j] = "..";
                     correctAnswer = randomStart;
                 } else {
-                    result += randomStart + " ";
+                    numbers[j] = Integer.toString(randomStart);
                 }
+
+                randomStart += progression;
             }
 
-            rounds[i][0] = result;
+            String question = String.join(" ", numbers);
+
+            rounds[i][0] = question;
             rounds[i][1] = Integer.toString(correctAnswer);
         }
 
-        System.out.println(Engine.engine(rounds, inputGameChoice));
+        Engine.run(rounds, PROGRESS_DESCRIPTION);
     }
 }

@@ -8,11 +8,10 @@ public class PrimeGame {
     static final int ROUNDS_LENGTH = 3;
     static final int ROUND_LENGTH = 2;
 
-    public static void primeDesc() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-    }
+    static final String PRIME_DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static void primePlay(String inputGameChoice) {
+
+    public static void primePlay() {
 
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
         for (int i = 0; i < ROUNDS_LENGTH; i++) {
@@ -20,7 +19,7 @@ public class PrimeGame {
             rounds[i][1] = isPrime(Integer.parseInt(rounds[i][0])) ? "yes" : "no";
         }
 
-        System.out.println(Engine.engine(rounds, inputGameChoice));
+        Engine.run(rounds, PRIME_DESCRIPTION);
     }
 
     public static boolean isPrime(int number) {

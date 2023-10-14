@@ -1,48 +1,35 @@
 package hexlet.code;
 
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.PrimeGame;
-import hexlet.code.games.ProgressionGame;
-import hexlet.code.games.GCDGame;
-import hexlet.code.games.CalcGame;
-
 import java.util.Scanner;
 
 public class Engine {
-    static final int NUMBER_OF_ROUNDS = 3;
 
-    public static void description(String numOfDescription) {
-        switch (numOfDescription) {
-            case "2" -> EvenGame.evenDesc();
-            case "3" -> CalcGame.calcDesc();
-            case "4" -> GCDGame.gcdDesc();
-            case "5" -> ProgressionGame.progressionDesc();
-            case "6" -> PrimeGame.primeDesc();
-            default -> throw new IllegalStateException("Unexpected value: " + numOfDescription);
-        }
-    }
-    public static String engine(String[][] game, String numOfDescription) {
+    public static void run(String[][] roundsData, String description) {
 
-        String username = Cli.hello();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String inputName = new Scanner(System.in).next();
+        System.out.printf("Hello, %s! ", inputName);
+        System.out.println(description);
 
-        description(numOfDescription);
+        for (String[] roundData : roundsData) {
+            String question = roundData[0];
+            String correctAnswer = roundData[1];
 
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            System.out.println("Question: " + game[i][0]);
+            System.out.println("Question: " + question);
             System.out.print("Your answer: ");
-            var userInput = new Scanner(System.in)
-                    .nextLine()
-                    .toLowerCase()
-                    .trim();
 
-            if (game[i][1].equals(userInput)) {
-                System.out.println("Correct!");
-            } else {
-                return "'" + userInput + "' is wrong answer ;(. "
-                        + "Correct answer was '" + game[i][1] + "'.\n"
-                        + "Let's try again, " + username + "!";
+            String userInput = new Scanner(System.in).nextLine().toLowerCase().trim();
+
+            if (!correctAnswer.equals(userInput)) {
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!",
+                        userInput, correctAnswer, inputName);
+                return;
             }
+
+            System.out.println("Correct!");
         }
-        return "Congratulations, " + username + "!";
+
+        System.out.printf("Congratulations, %s!", inputName);
     }
 }

@@ -8,10 +8,8 @@ public class CalcGame {
     static final int OPERATORS_RANGE = 3;
     static final int ROUNDS_LENGTH = 3;
     static final int ROUND_LENGTH = 2;
-    public static void calcDesc() {
-        System.out.println("What is the result of the expression?");
-    }
-    public static void calcPlay(String inputGameChoice) {
+    static final String CALC_DESCRIPTION = "What is the result of the expression?";
+    public static void calcPlay() {
 
         String[] operators = {"+", "-", "*"};
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
@@ -24,7 +22,7 @@ public class CalcGame {
             rounds[i][1] = Integer.toString(calculate(firstNumber, operator, secondNumber));
 
         }
-        System.out.println(Engine.engine(rounds, inputGameChoice));
+        Engine.run(rounds, CALC_DESCRIPTION);
     }
 
     public static int calculate(int firstNumber, String operator, int secondNumber) {

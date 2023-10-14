@@ -7,11 +7,9 @@ public class EvenGame {
     static final int ROUNDS_LENGTH = 3;
     static final int ROUND_LENGTH = 2;
     static final int RANDOM_RANGE = 100;
-    public static void evenDesc() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-    }
+    static final String EVEN_DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-    public static void play(String inputGameChoice) {
+    public static void evenPlay() {
 
         String[][] rounds = new String[ROUNDS_LENGTH][ROUND_LENGTH];
         for (int i = 0; i < ROUNDS_LENGTH; i++) {
@@ -19,7 +17,7 @@ public class EvenGame {
             rounds[i][0] = Integer.toString(randomNumber);
             rounds[i][1] = isEven(randomNumber) ? "yes" : "no";
         }
-        System.out.println(Engine.engine(rounds, inputGameChoice));
+        Engine.run(rounds, EVEN_DESCRIPTION);
     }
 
     public static boolean isEven(int number) {

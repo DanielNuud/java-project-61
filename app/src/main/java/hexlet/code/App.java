@@ -25,11 +25,11 @@ public class App {
 
         switch (inputGameChoice) {
             case "1" -> Cli.hello();
-            case "2" -> EvenGame.play(inputGameChoice);
-            case "3" -> CalcGame.calcPlay(inputGameChoice);
-            case "4" -> GCDGame.gcdPlay(inputGameChoice);
-            case "5" -> ProgressionGame.progressionPlay(inputGameChoice);
-            case "6" -> PrimeGame.primePlay(inputGameChoice);
+            case "2" -> EvenGame.evenPlay();
+            case "3" -> CalcGame.calcPlay();
+            case "4" -> GCDGame.gcdPlay();
+            case "5" -> ProgressionGame.progressionPlay();
+            case "6" -> PrimeGame.primePlay();
             case "0" -> {
             }
             default -> throw new IllegalArgumentException("Unknown value: " + inputGameChoice);
