@@ -1,3 +1,13 @@
+# Mind Games
+
+"Mind Games" is a collection of five console games inspired by popular mobile apps designed to boost brainpower. Each game presents questions that require correct answers. A game is considered completed after three correct answers. Incorrect answers end the game and prompt a restart. The games included are:
+
+1. **Calculator**: Solve arithmetic expressions.
+2. **Progression**: Find the missing numbers in a sequence.
+3. **Even Number Identification**: Determine whether a number is even.
+4. **Greatest Common Divisor**: Identify the greatest common divisor.
+5. **Prime Number Identification**: Determine whether a number is prime.
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/DanielNuud/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/DanielNuud/java-project-61/actions)
 <a href="https://codeclimate.com/github/DanielNuud/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/3034510f484a840fa7b8/maintainability" /></a>
